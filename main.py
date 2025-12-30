@@ -44,7 +44,7 @@ def list_favorites(favorites_manager):
     #List all favorites with current weather
     cities = favorites_manager.list_cities()
     if not cities:
-        print("No favorite cities yet.")
+        print("\nNo favorite cities yet.\n")
         return
     for city in cities:
         weather = get_weather(city)
