@@ -23,8 +23,19 @@ def sortAndFindMedian(numbers):
         mid = n//2
         return sorted_numbers[mid]
 
-#Example usage
-numbers = [7, 2, 5, 3, 9]
-median = sortAndFindMedian(numbers)
-print("Sorted numbers:", sort(numbers))
-print("Median:", median)
+def main():
+    #User input
+    input_str = input("Enter numbers separated by spaces: ")
+    numbers = list(map(float, input_str.strip().split()))
+    
+    median = sortAndFindMedian(numbers)
+    print("Median of the numbers is:", median)
+
+if __name__ == "__main__":
+    main()
+# This program calculates the median of a list of numbers.
+# First, it sorts the list using a sorting algorithm (selection sort in this case).
+# After sorting, it checks if the list has an even or odd number of elements.
+# If even, the median is the average of the two middle numbers.
+# If odd, the median is the middle number.
+# The program allows the user to input numbers separated by spaces and then outputs the median.
